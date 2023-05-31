@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cssanimation</title>
+
+<style>
+.skill{
+background-color: rgb(128, 128, 128);
+width:300px;
+height: auto;
+padding: 20px;
+}
+.skill ul li{
+color:rgb(30, 4, 4);
+list-style: none;
+text-transform: uppercase;
+margin: 50px 0;
+position: relative;
+}
+.skill li::before{
+
+    content: '';
+    position:absolute;
+    top: calc(100% + 5px);
+    left: 0%;
+    border-radius: 1000px;
+
+    background-color: rgb(203, 216, 216);
+    width:100%;
+    height: 20px;
+
+}
+.skill li::after{
+
+    content: '';
+    position:absolute;
+    top: calc(100% + 5px);
+    left: 0%;
+    border-radius: 1000px;
+
+    background-color:#fff;
+    width: 0%;
+    height: 20px;
+
+
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 2;
+    /* animation-direction: forword; */
+    animation-fill-mode:forwards;
+}
+
+.skill li.html::after{
+    animation-name: html;
+}
+@keyframes html {
+    to{
+        width:90%;
+        background-color:rgb(16, 228, 228);
+    }
+    
+}
+.skill li.css::after{
+
+animation-name: css;
+}
+@keyframes css {
+    to{
+        width:70%;
+        background-color:coral;
+    }
+    
+}
+.skill li.js::after{
+
+    animation-name: js;
+
+}
+@keyframes js{
+    to{
+        width:50%;
+        background-color:rgb(255, 80, 159);
+    }
+
+}
+
+
+.skill li.jq::after{
+
+    animation-name: jq;
+
+}
+
+@keyframes jq{
+    to{
+        width:30%;
+        background-color:rgb(80, 255, 135);
+    }
+
+}
+
+
+
+.skill li.c::after{
+
+animation-name: c;
+
+}
+
+@keyframes c{
+to{
+    width:20%;
+    background-color:rgb(56, 8, 130);
+}
+
+}
+
+
+</style>
+
+</head>
+<body>
+    <div class="skill">
+     <ul>
+     <li class="html">HTNL</li>
+     <li class="css">CSS</li>
+     <li class="js">JS</li>
+     <li class="jq">JQUERY</li>
+     <li class="c">C++</li>
+     </ul>
+    </div>
+</body>
+</html>
